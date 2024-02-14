@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>main page</title>
+    <style>
+      body {
+        background-image: url('Background.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+      </style>
+      <script>  
+        function jump(){  
+        window.location.href="file:///E:/%E5%BC%80%E5%8F%91/%E9%A2%86%E8%88%AA%E6%9D%AF/JiaoYuJieMian.html";
+        }  
+        var UserName=1,Password=1;
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+          event.preventDefault(); 
+          UserName = document.getElementById('username').value;
+          Password = document.getElementById('password').value;
+        });
+        function disp_alert() 
+        { 
+          alert("这位名为"+UserName+"的用户，您的密码是："+Password+"，您的行为导致您被盗号了哦");
+        } 
+    </script> 
+  </head>
+  <body>
+    <STYLE type="text/css">
+      #login{
+      width:400px;
+      height:280px;
+      position:absolute;
+      left: 50%;
+      top: 50%;
+      margin-left:-200px;
+      margin-top:-140px;
+      border:1px;
+      background-color:red;
+      align:center;
+      }
+      #form{
+      width:300px;
+      height:160px;
+      position:relative;
+      left:50%;
+      top:50%;
+      margin-left:-150px;
+      margin-top:-80px;
+      }
+    </STYLE>
+  </style>
+    <h1 align="center" style="font-size: 4rem; color: yellow">新春活动！填写以下内容即可获得VIP体验卡</h1>
+    <form id="myForm">
+      <center>
+        <table>
+          <tr>
+              <td align="center"><label for="username">账号</label> </td>
+              <td align="center"><input type="text" name="username" id="username"> </td>
+          </tr>
+          <tr>
+              <td align="center"><label for="password">密码</label> </td>
+              <td align="center"><input type="password" name="password" id="password"> </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center" id="submit">
+              <button onclick=javascript:disp_alert()>提交</button>
+           </td>
+          </tr>
+        </table>
+      </center>
+    </form>
+  </body>
+</html>
