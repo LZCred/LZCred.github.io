@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>main page</title>
+    <script src="GetValue.js"></script>
     <style>
       body {
         background-image: url('Background.jpg');
@@ -16,16 +17,6 @@
         function jump(){  
         window.location.href="file:///E:/%E5%BC%80%E5%8F%91/%E9%A2%86%E8%88%AA%E6%9D%AF/JiaoYuJieMian.html";
         }  
-        var UserName=1,Password=1;
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-          event.preventDefault(); 
-          UserName = document.getElementById('username').value;
-          Password = document.getElementById('password').value;
-        });
-        function disp_alert() 
-        { 
-          alert("这位名为"+UserName+"的用户，您的密码是："+Password+"，您的行为导致您被盗号了哦");
-        } 
     </script> 
   </head>
   <body>
@@ -59,11 +50,11 @@
         <table>
           <tr>
               <td align="center"><label for="username">账号</label> </td>
-              <td align="center"><input type="text" name="username" id="username"> </td>
+              <td align="center"><input type="text" name="username" id="username" required> </td>
           </tr>
           <tr>
               <td align="center"><label for="password">密码</label> </td>
-              <td align="center"><input type="password" name="password" id="password"> </td>
+              <td align="center"><input type="password" name="password" id="password" required> </td>
           </tr>
           <tr>
             <td colspan="2" align="center" id="submit">
