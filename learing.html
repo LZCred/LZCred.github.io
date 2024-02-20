@@ -3,8 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <script src="GetValue.js"></script>
   </head>
   <body>
-    <p id="myParagraph"></p>
+    <h1>你是第<span id="input"></span>位访客</h1>
+    <script>
+      var cnt = localStorage.getItem("visitCount"); 
+      if (!cnt)cnt = 1;
+      else cnt = parseInt(cnt) + 1;
+      localStorage.setItem("visitCount", cnt);
+      var VisitNumber = document.getElementById("visit-count");
+      document.getElementById('input').innerHTML = cnt;
+    </script>
+    
   </body>
 </html>

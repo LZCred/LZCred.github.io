@@ -1,4 +1,4 @@
-function disp_alert() 
+function DispAlert() 
 { 
     var form = document.getElementById('myForm');
     var UserName = form.elements['username'].value,Password = form.elements['password'].value;
