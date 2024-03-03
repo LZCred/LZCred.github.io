@@ -5,5 +5,5 @@ function DispAlert()
     form.addEventListener('submit', function(event) {
         event.preventDefault();
     });
-    alert("这位名为"+UserName+"的用户，您的密码是："+Password+"，猜猜接下来会发生什么呢？");
+    alert("这位名为"+UserName+"的用户，您的密码是："+Password+"，假若平台对其倒卖，将会发生什么呢？");
 } 
