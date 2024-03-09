@@ -6,7 +6,14 @@
     <script src="GetValue.js"></script>
   </head>
   <body>
-    <h1>你是第<span id="input"></span>位访客</h1>
+    <style type="text/css">
+      .divcss{
+        height:500px;
+        width:1230px;
+        padding-left: 10px;
+      }
+    </style>
+    <h1 align="center">你是第<span id="input"></span>位访客</h1>
     <script>
       var cnt = localStorage.getItem("visitCount"); 
       if (!cnt)cnt = 1;
@@ -16,5 +23,18 @@
       document.getElementById('input').innerHTML = cnt;
       var n=0;
     </script>
+    <div class="divcss">
+    <h2 >防骗小技巧</h2>
+    <h3>1.查验“可信网站”</h3>
+    <div>如今，不少网站已在网站首页安装了第三方网站身份诚信认证——“可信网站”，可帮助网民判断网站的真实性。“可信网站”验证是通过对企业域名注册信息、网站信息和企业工商登记信息进行交互审核，来验证网站真实身份。通过认证后，企业网站就进入中国互联网络信息中心（CNNIC）运行的国家最高目录数据库中的“可信网站”子数据库中，网民可通过点击网站页面底部的“可信网站”标识确认网站的真实身份。</div>
+    <h3>2.核对网站域名</h3>
+    <div>假冒网站一般和真实网站有细微区别，有疑问时要仔细辨别其不同之处。比如在域名方面，假冒网站通常将英文字母I替换为数字1，CCTV被换成CCYV或者CCTV－VIP这样的仿造域名。</div>
+    <h3>3.比较网站内容</h3>
+    <div>假冒网站上的字体样式不一致，经常模糊不清。仿冒网站上的超链接往往都是“摆设”，用户可点击栏目或图片中的各个链接看是否能打开。</div>
+    <h3>4.查询网站备案</h3>
+    <div>通过ICP备案可以查询网站的基本情况、网站拥有者的情况，对于没有合法备案的非经营性网站或没有取得ICP许可证的经营性网站，就要当心了。</div>
+    <h3>5.查看安全证书</h3>
+    <div>大型的电子商务网站都应用了可信证书类产品，这类的网站网址都是“https”打头的，如果发现不是“https”开头，应谨慎对待。</div>
+    </div>
   </body>
 </html>
