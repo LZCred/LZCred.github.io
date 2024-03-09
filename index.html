@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>main page</title>
-    <script src="GetValue.js"></script>
     <style>
       body {
         background-image: url('Background.jpg');
@@ -17,24 +16,20 @@
   <body>
   </style>
     <h1 align="center" style="font-size: 4rem; color: yellow">新春活动！填写以下内容即可获得VIP体验卡</h1>
-    <form id="myForm">
-      <center>
-        <table>
-          <tr>
-              <td align="center"><label for="username">账号</label> </td>
-              <td align="center"><input type="text" name="username" id="username" required> </td>
-          </tr>
-          <tr>
-              <td align="center"><label for="password">密码</label> </td>
-              <td align="center"><input type="password" name="password" id="password" required> </td>
-          </tr>
-          <tr>
-            <td colspan="2" align="center" id="submit">
-              <button onclick=DispAlert()>提交</button>
-           </td>
-          </tr>
-        </table>
-      </center>
-    </form>
+    <center>
+      <form method="get" action="learning.html">
+        <div>
+          <label for="username">账号: </label>
+          <input type="text" name="username" id="username" required />
+        </div>
+        <div>
+          <label for="password">密码: </label>
+          <input type="password" name="password" id="password" required />
+        </div>
+        <div>
+          <input type="submit" value="提交" />
+        </div>
+      </form>
+    </center>
   </body>
 </html>

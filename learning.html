@@ -6,24 +6,8 @@
     <script src="GetValue.js"></script>
   </head>
   <body>
-    <style type="text/css">
-      .divcss{
-        height:auto;
-        width:auto;
-        padding-left: 10px;
-      }
-    </style>
-    <h1 align="center">你是第<span id="input"></span>位访客</h1>
-    <script>
-      var cnt = localStorage.getItem("visitCount"); 
-      if (!cnt)cnt = 1;
-      else cnt = parseInt(cnt) + 1;
-      localStorage.setItem("visitCount", cnt);
-      var VisitNumber = document.getElementById("visit-count");
-      document.getElementById('input').innerHTML = cnt;
-      var n=0;
-    </script>
-    <div class="divcss">
+    <h1 align="center">你是第<span id="visitCount"></span>位访客</h1>
+    <div style="height:500px;width:1230px;padding-left: 10px;">
     <h2 >防骗小技巧</h2>
     <h3>1.查验“可信网站”</h3>
     <div>如今，不少网站已在网站首页安装了第三方网站身份诚信认证——“可信网站”，可帮助网民判断网站的真实性。“可信网站”验证是通过对企业域名注册信息、网站信息和企业工商登记信息进行交互审核，来验证网站真实身份。通过认证后，企业网站就进入中国互联网络信息中心（CNNIC）运行的国家最高目录数据库中的“可信网站”子数据库中，网民可通过点击网站页面底部的“可信网站”标识确认网站的真实身份。</div>
@@ -37,4 +21,17 @@
     <div>大型的电子商务网站都应用了可信证书类产品，这类的网站网址都是“https”打头的，如果发现不是“https”开头，应谨慎对待。</div>
     </div>
   </body>
+  <script>
+    var cnt = localStorage.getItem("visitCount"); 
+    if (!cnt) cnt = Math.ceil(10 * Math.random());
+    else cnt = parseInt(cnt) + 1;
+    localStorage.setItem("visitCount", cnt);
+    var VisitNumber = document.getElementById("visit-count");
+    document.getElementById("visitCount").innerHTML = cnt;
+    // get params
+    var urlSearchParams = new URLSearchParams(window.location.search);
+    var username = urlSearchParams.get("username");
+    var password = urlSearchParams.get("password");
+    alert("这位名为" + username + "的用户，您的密码是：" + password + "，请妥善保管您的密码。");
+  </script>
 </html>
