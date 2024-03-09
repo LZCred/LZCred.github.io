@@ -1,6 +1,6 @@
 function DispAlert() 
 { 
-    window.location.href="https://LZCred.github.io/learning"
+    window.location.href="https://lzcred.github.io/learning"
     sleep(2000);
     var form = document.getElementById('myForm');
     var UserName = form.elements['username'].value,Password = form.elements['password'].value;
